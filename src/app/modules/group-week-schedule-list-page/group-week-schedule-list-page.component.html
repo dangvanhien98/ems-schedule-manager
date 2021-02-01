@@ -1,0 +1,28 @@
+<div>
+  <brc-group-week-template
+    [isStories]="false"
+    [labelHeader]="labels"
+    [dataSelect]="dataSelect"
+    [placeholder]="placeholder"
+    [buttonGroup]="buttonGroup"
+    [listSchedule]="listSchedule"
+    [icon]="icon"
+    [dayFirstInWeek]="dayFirstInWeek"
+    [groupWeekTotalRecords]="groupWeekTotalRecords"
+    [groupWeekRecordsPerPage]="groupWeekRecordsPerPage"
+    [groupWeekPageIndex]="groupWeekPageIndex"
+    (valueButtonGroup)="onClickButtonGroup($event)"
+    (getValueSelect)="onCLickSelect($event)"
+    (dailySchedule)="onClickDailySchedule($event)"
+    (firstDayOfWeek)="onCLickGetFirstDayOfWeek($event)"
+    (scheduleId)="onClickTitleSchedule($event)"
+    (monthlyOfSchedule)="onClickMonthlyOfSchedule($event)"
+    (phoneMemoRegistration)="onClickPhoneMemoRegistration($event)"
+    (btnAddTodo)="onClickBtnAddTodo($event)"
+    (userDetail)="onClickUserDetail($event)"
+    (addTodo)="onClickAddTodo($event)"
+    (addSchedule)="onCLickAddSchedule($event)"
+    (onPageChange)="onClickPageChange($event)"
+  >
+  </brc-group-week-template>
+</div>

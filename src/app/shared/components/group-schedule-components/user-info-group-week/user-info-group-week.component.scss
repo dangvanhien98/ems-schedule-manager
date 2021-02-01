@@ -1,0 +1,103 @@
+.personal-information-box {
+    padding: 2px;
+}
+.person-information{
+    font-size: 17px;
+    color: rgb(12, 12, 141);
+    padding: 6px;
+    cursor: pointer;
+}
+
+.monthly-registration {
+    cursor: pointer;
+}
+.monthly-registration:hover {
+    cursor: pointer;
+    color: rgb(76, 162, 233);
+}
+.phone-memo {
+    cursor: pointer;
+}
+.phone-memo:hover {
+    cursor: pointer;
+    color: rgb(76, 162, 233);
+}
+
+.person-icon {
+    color: rgb(14, 76, 128);
+    font-size: 25px;
+    vertical-align: bottom;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.add-box {
+    color: rgb(9, 180, 60);
+    font-size: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.monthly-icon {
+    color: rgb(121, 60, 20);
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 6px;
+    cursor: pointer;
+}
+.phone-icon {
+    color: rgb(50, 46, 255);
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 6px;
+    cursor: pointer;
+}
+.confirm-icon {
+    color: rgb(5, 88, 30);
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 6px;
+}
+.arrow-drop-down-icon {
+    color: rgb(53, 54, 53);
+    font-size: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.confirmation:hover {
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.registration:hover {
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: rgb(76, 162, 233);
+}
+.confirmation {
+    position: relative;
+    display: inline-block;
+}
+.registration {
+    position: relative;
+    display: inline-block;
+}
+.confirmation-dropdown-content {
+    //display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.confirmation-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.confirmation-dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: rgb(76, 162, 233);
+}
+.confirmation:hover {
+    color: rgb(76, 162, 233);
+}

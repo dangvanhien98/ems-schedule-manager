@@ -1,0 +1,20 @@
+<div class="container">
+  <div *ngFor="let item of sortArr(listDataInDay)">
+    <brc-new-content-schedule
+      [dataSchedule]="item"
+      [icon]="icon"
+      [isWarning]="item.isWarning"
+      (scheduleId)="getDetail($event)"
+    >
+    </brc-new-content-schedule>
+  </div>
+  <div>
+    <brc-buttons-add-schedule
+      [isAddTodo]= "isAddTodo"
+      [userId]="userId"
+      (addTodo)="clickAddTodo($event)"
+      (addSchedule)="clickAddSchedule($event)"
+    >
+    </brc-buttons-add-schedule>
+  </div>
+</div>

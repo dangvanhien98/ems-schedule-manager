@@ -1,0 +1,40 @@
+<div
+  class="rowSchedule"
+  [ngClass]="{'warningBg' : i > 0,'lastRow' : i == (listDataDailySchedule.length - 1)}"
+  *ngFor="let listSchedule of listDataDailySchedule; index as i"
+  fxLayout="row wrap"
+>
+  <div
+    fxFlex="{{ getPercent(schedule) }}%"
+    *ngFor="let schedule of listSchedule"
+  >
+    <div
+      *ngIf="
+        schedule.title != '' &&
+          schedule.typeRepeat != '' &&
+          schedule.typeSchedule != '';
+        then thenBlock;
+        else elseBlock
+      "
+    ></div>
+    <ng-template #thenBlock
+      ><brc-new-content-schedule
+        (scheduleId)="getScheduleId($event)"
+        [forDay]="true"
+        [dataSchedule]="schedule"
+        [icon]="icon"
+        [isWarning]="schedule.isWarning"
+        [rowIndex]="i"
+      ></brc-new-content-schedule
+    ></ng-template>
+    <ng-template #elseBlock
+      ><brc-buttons-add-schedule
+        [isAddTodo]="isAddTodo"
+        [userId]="userId"
+        (addSchedule)="clickAddSchedule($event)"
+        (addTodo)="clickAddTodo($event)"
+        *ngIf="i == 0"
+      ></brc-buttons-add-schedule
+    ></ng-template>
+  </div>
+</div>

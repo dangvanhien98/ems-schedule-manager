@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+.header-week {
+    border: 1px solid lightgrey;
+}
+
+button{
+    color:  #4F4F4F;
+    margin: 2px 2px;
+    border: 1px solid rgb(34, 109, 194);
+    border-radius: 5px;
+    padding: 3px 5px;
+    background-color:#f8f8f8;
+}
+button:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,12 @@
+<div fxLayout="row wrap" >
+    <div fxFlex="100%">
+        <div [style.backgroundColor]="dynamicColorPrevious" class="hour-pre" fxFlex="50%"><span>{{hourNumber}}</span></div>
+        <div [style.backgroundColor]="dynamicColorNext" class="hour-next" fxFlex="50%"></div>
+    </div>
+</div>
+<div fxLayout="row wrap" >
+    <div [style.backgroundColor]="dynamicColorPrevious" class="empty-parts" fxFlex="25%"></div>
+    <div [style.backgroundColor]="dynamicColorPrevious" class="empty-parts" fxFlex="25%"></div>
+    <div [style.backgroundColor]="dynamicColorNext" class="empty-parts" fxFlex="25%"></div>
+    <div [style.backgroundColor]="dynamicColorNext" class="empty-parts" fxFlex="25%"></div>
+</div>

@@ -1,0 +1,16 @@
+<div fxLayout="row wrap">
+  <div fxFlex="15" >
+    <brc-handle-week
+      (dateOutput)="handleWeek($event)"
+      [dateInput]="date"
+    ></brc-handle-week>
+  </div>
+  <div fxFlex="85" >
+    <brc-day-in-week
+      (dailySchedule)="scheduleOfDate($event)"
+      fxFlex
+      *ngFor="let day of listDay"
+      [date]="day"
+    ></brc-day-in-week>
+  </div>
+</div>

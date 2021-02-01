@@ -1,0 +1,26 @@
+<div class="container col-container" fxLayout fxLayout="row wrap" >
+  <div fxFlex="15" class="col_info">
+    <brc-user-info-group-week
+      [userInfo]="userInfo"
+      [monthly]="dayFirstInWeek"
+      (month)="handleClickMonth($event)"
+      (phone)="handleClickPhone($event)"
+      (btnAddTodo)="handleClickBtnAddTodo($event)"
+      (userDetail)="handleClickUserDetail($event)">
+    </brc-user-info-group-week>
+  </div>
+  <div fxFlex="85" >
+    <brc-week-schedule
+      [isStories]="isStories"
+      [isAddTodo]="isAddTodo"
+      [dayFirstInWeek]="dayFirstInWeek"
+      [listDataSchedule]="listDataSchedule" 
+      [icon]="icon" 
+      [userId]="userInfo.userId"
+      (btnAddTodo)="handleClickBtnAddTodo($event)"
+      (addTodo)="clickAddTodo($event)" 
+      (addSchedule)="clickAddSchedule($event)"
+      (scheduleId)="getDetail($event)">
+    </brc-week-schedule>
+  </div>
+</div>

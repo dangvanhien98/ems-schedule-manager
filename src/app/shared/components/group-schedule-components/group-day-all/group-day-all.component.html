@@ -1,0 +1,42 @@
+<div>
+    <div fxLayout="row wrap">
+        <div fxFlex="100%" [ngClass]="{'sticky' : isSticky}" class="header-group">
+            <brc-header-page-group-day
+                [labelHeader]="labelHeader"
+                [dataSelect]="dataSelect"
+                [placeholder]="placeholder"
+                [buttonGroup]="buttonGroup"
+                [dateCurrent]="dateCurrent"
+                [hourStart]="getStartHour()"
+                [hourEnd]="getEndHour()"
+                (valueButtonGroup)="onValueButtonGroup($event)"
+                (getValueSelect)="onGetValueSelect($event)">
+            </brc-header-page-group-day>
+        </div>
+        <div fxLayout="100%" *ngFor="let listData of listDataSchedule; index as i">
+            <brc-group-day-person-board
+                [isAddTodo]="i==0? true : false"
+                [userInfo]="listData.detailUser"
+                [monthly]="dateCurrent"
+                [startHour]="getStartHour()"
+                [endHour]="getEndHour()"
+                [listDataSchedule]="listData.detailSchedule"  
+                (month)="onMonth($event)"
+                (phone)="onPhone($event)"
+                (scheduleId)="onScheduleId($event)"
+                (addSchedule)="onAddSchedule($event)"
+                (addTodo)="onAddTodo($event)"
+                (btnAddTodo)="onBtnAddTodo($event)"
+                (userDetail)="onUserDetail($event)">
+            </brc-group-day-person-board>
+        </div>
+    </div>
+    <div>
+        <brc-mat-paginator
+            [total]="pageSize"
+            [pageSize]="total"
+            [pageIndex]="pageIndex"
+            (onPageChange)="onPageEvent($event)"
+        ></brc-mat-paginator>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div fxLayout="row wrap" fxLayout.sm="column" fxLayout.xs="column">
+  <div fxLayout="row" fxFlex="20%" fxFlex.sm="100" fxFlex.xs="100">
+    <div class="label">
+      <brc-label [label]="labelHeader"></brc-label>
+    </div>
+    <div fxFlex.sm="95" fxFlex.xs="95">
+      <brc-app-select
+        [data]="data"
+        [label]="placeholder"
+        (getValue)="onGetValueSelect($event)"
+      ></brc-app-select>
+    </div>
+  </div>
+  <div class="date-current" fxFlex="40%">
+    {{ dateCurrent | date: "EEEE, MMMM d, y" }}
+  </div>
+  <div class="button-group" fxFlex="40%" fxLayoutAlign.sm="center" fxLayoutAlign.xs="center">
+    <div style="float: right; padding-right: 8px;">
+      <brc-button-group-schedule
+        [buttonGroup]="buttonGroup"
+        [date]="date"
+        (valueButtonGroup)="onValueButtonGroup($event)"
+      ></brc-button-group-schedule>
+    </div>
+  </div>
+</div>

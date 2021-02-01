@@ -1,0 +1,30 @@
+.label {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+.date-current {
+  text-align: center;
+  padding-top: 17px;
+  font-size: 17px;
+  color: #434343;
+}
+.button-group {
+  padding-top: 10px;
+  padding-bottom: 17.5px;
+}
+@media only screen and (max-width: 600px){
+  .date-current {
+    padding-top: 0px;
+  }
+}
+@media only screen and (max-width: 951px){
+  .date-current {
+    padding-top: 0px;
+  }
+}
+@media only screen and (min-width: 1112px){
+  .date-current {
+    padding-left: 15%;
+  }
+}

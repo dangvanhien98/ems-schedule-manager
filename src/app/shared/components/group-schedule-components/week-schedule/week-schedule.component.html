@@ -1,0 +1,16 @@
+<div fxLayout fxLayout="row wrap" class="col-container">
+  <div *ngFor="let item of listDayInWeek" fxFlex class="col">
+    <brc-day-schedule
+      [isAddTodo]="isAddTodo"
+      [day]="item"
+      [listDataSchedule]="listDataSchedule"
+      [icon]="icon"
+      [userId]="userId"
+      (addTodo)="clickAddTodo($event)"
+      (addSchedule)="clickAddSchedule($event)"
+      (scheduleId)="getDetail($event)"
+      [isStories] = "isStories"
+    >
+    </brc-day-schedule>
+  </div>
+</div>

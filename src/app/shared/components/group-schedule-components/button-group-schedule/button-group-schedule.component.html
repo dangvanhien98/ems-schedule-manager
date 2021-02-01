@@ -1,0 +1,27 @@
+<div>
+  <button
+    *ngFor="let item of buttonGroup"
+    (click)="onClick(item.value)"
+    id="displayValue"
+    style="float: right;"
+  >
+    <mat-icon
+      style="vertical-align: middle;"
+      *ngIf="
+        item?.icon && item?.value != valueNextWeek && item?.value != valueNextDay
+      "
+    >
+      {{ item?.icon }}
+    </mat-icon>
+    {{ item.displayValue }}
+    <mat-icon
+      *ngIf="
+        item?.icon &&
+        item?.value != valueLastWeek &&
+        item?.value != valueTheDayBefore
+      "
+    >
+      {{ item?.icon }}
+    </mat-icon>
+  </button>
+</div>

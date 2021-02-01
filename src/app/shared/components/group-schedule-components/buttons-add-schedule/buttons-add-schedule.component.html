@@ -1,0 +1,10 @@
+<div fxLayout="row wrap" fxLayout.sm="column" class="personal-information-box">
+    <div *ngIf="isAddTodo" class="button-add-todo tooltip" (click)="clickAddTodo()" >
+        <mat-icon aria-hidden="false" class="button-add-todo-icon" aria-label="how_to_reg icon">library_add</mat-icon>
+        <span class="tooltip-text">Add Todo</span>
+    </div>
+    <div class="button-add-schedule tooltip" (click)="clickAddSchedule()" >
+        <mat-icon aria-hidden="false" class="button-add-schedule-icon" aria-label="call icon">add_circle_outline</mat-icon>
+        <span class="tooltip-text">Add Schedule</span>
+    </div>
+</div>

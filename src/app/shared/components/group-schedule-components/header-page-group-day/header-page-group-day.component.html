@@ -1,0 +1,23 @@
+<div>
+  <brc-header-schedule
+    [labelHeader]="labelHeader"
+    [data]="dataSelect"
+    [placeholder]="placeholder"
+    [buttonGroup]="buttonGroup"
+    [date]="dateCurrent"
+    [dateCurrent]="dateCurrent"
+    (valueButtonGroup)="onValueButtonGroup($event)"
+    (getValueSelect)="onGetValueSelect($event)"
+  >
+  </brc-header-schedule>
+  <div fxLayout="row">
+    <div fxFlex="15" class="empty-box"></div>
+    <div fxFlex="85">
+      <brc-hourly-time 
+        [hourStart]="hourStart"
+        [hourEnd]="hourEnd"
+      >
+      </brc-hourly-time>
+    </div>
+  </div>
+</div>

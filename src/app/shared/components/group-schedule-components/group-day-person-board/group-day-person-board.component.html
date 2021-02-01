@@ -1,0 +1,26 @@
+<div class="container col-container" fxLayout fxLayout="row">
+  <div fxFlex="15" class="col_info">
+    <brc-user-info-group-week
+      [userInfo]="userInfo"
+      [monthly]="monthly"
+      (month)="onMonth($event)"
+      (phone)="onPhone($event)"
+      (btnAddTodo)="onBtnAddTodo($event)"
+      (userDetail)="onUserDetail($event)"
+    >
+    </brc-user-info-group-week>
+  </div>
+  <div fxFlex="85">
+    <brc-daily-board
+      [isAddTodo]="isAddTodo"
+      [listDataSchedule]="listDataSchedule"
+      [startHour]="startHour"
+      [endHour]="endHour"
+      [userId]="userInfo.userId"
+      (scheduleId)="onScheduleId($event)"
+      (addSchedule)="onAddSchedule($event)"
+      (addTodo)="onAddTodo($event)"
+    >
+    </brc-daily-board>
+  </div>
+</div>

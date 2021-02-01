@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  border: 1px solid lightgrey;
+  background-color: #f8f8f8;
+  font-family: emoji;
+  line-height: 30px;
+}
+
+div:hover{
+  cursor: pointer;
+}
+
+p{
+  margin: 0px 0px;
+}

@@ -1,0 +1,47 @@
+<div class="group-week-template" >
+  <div class="fixed-header" fxLayout="row wrap">
+    <div fxFlex="100%" [ngClass]="{'sticky' : isSticky}" class="header-group">
+      <brc-header-page-group-week 
+        [labelHeader]= "labelHeader"
+        [dataSelect] ="dataSelect"
+        [dateCurrent] ="dayFirstInWeek"
+        [placeholder] = "placeholder"
+        [buttonGroup] = "buttonGroup"
+        (valueButtonGroup)="onValueButtonGroup($event)"
+        (getValueSelect)="onGetValueSelect($event)"
+        (dailySchedule)="onDailySchedule($event)"
+        (firstDayOfWeek)="onFirstDayOfWeek($event)"
+      ></brc-header-page-group-week>
+    </div>
+  </div>
+  <div fxLayout="row wrap" class="body-group">
+    <div fxFlex="100%" *ngFor="let listDataSchedule of listSchedule; index as i">
+      <brc-group-week-person-board
+        [isStories]="isStories"
+        [isAddTodo]="i == 0 ? true: false"
+        [userInfo]="listDataSchedule.detailUser"
+        [dayFirstInWeek]="dayFirstInWeek"
+        [listDataSchedule]="listDataSchedule.detailSchedule" 
+        [icon]="icon" 
+        (btnAddTodo)="handleClickBtnAddTodo($event)"
+        (addTodo)="clickAddTodo($event)" 
+        (addSchedule)="clickAddSchedule($event)"
+        (scheduleId)="getDetail($event)"
+        (monthlyOfSchedule)="handleClickMonth($event)"
+        (phoneMemoRegistration)="handleClickPhone($event)"
+        (btnAddTodo)="handleClickBtnAddTodo($event)"
+        (userDetail)="handleClickUserDetail($event)"
+      ></brc-group-week-person-board>
+    </div>
+  </div>
+  <div>
+        <brc-mat-paginator
+        [total]="groupWeekTotalRecords"
+        [pageSize]="groupWeekRecordsPerPage"
+        [pageIndex]="groupWeekPageIndex"
+        (onPageChange)="onPageEvent($event)"
+        ></brc-mat-paginator>
+  </div>
+</div>
+
+

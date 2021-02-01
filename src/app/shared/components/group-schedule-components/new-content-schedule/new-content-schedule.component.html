@@ -1,0 +1,38 @@
+<div
+  class="container styple_main"
+  [ngStyle]="{ 'background-color': getColor() }"
+  [ngClass]="{ styple_main_day: forDay }"
+  fxLayout
+  fxLayout="row wrap"
+>
+  <div fxFlex="100" *ngIf="!forDay">
+    <mat-icon class="icon_warning" *ngIf="dataSchedule.isWarning">{{
+      icon.iconStart
+    }}</mat-icon>
+    <span
+      >{{ formatTime(dataSchedule.timeStart) }} -
+      {{ formatTime(dataSchedule.dueTime) }}</span
+    >
+  </div>
+  <div fxFlex="100">
+    <span *ngIf="forDay"
+      ><mat-icon class="icon_warning" *ngIf="dataSchedule.isWarning">{{
+        icon.iconStart
+      }}</mat-icon></span
+    >
+    <span
+      id="category"
+      class="style_type"
+      [ngStyle]="{ 'background-color': getColorOfType() }"
+      >{{ dataSchedule.typeSchedule }}
+    </span>
+    <div class="tooltip">
+      <a (click)="onClick(dataSchedule.scheduleId)" class="muilple-line">
+        {{ dataSchedule.title }}
+        <mat-icon *ngIf="isRepeat">{{ icon.iconEnd1 }}</mat-icon>
+        <mat-icon *ngIf="isShare">{{ icon.iconEnd2 }}</mat-icon>
+      </a>
+      <span class="tooltip-text">{{ dataSchedule.title }}</span>
+    </div>
+  </div>
+</div>

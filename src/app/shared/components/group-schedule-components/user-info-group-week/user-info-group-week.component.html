@@ -1,0 +1,18 @@
+<div fxLayout="row wrap" fxLayout.sm="column" class="personal-information-box">
+    <div fxFlex="100%" class="person-information" (click)="handleClickUserDetail(this.userInfo.userId)">
+        <mat-icon aria-hidden="false" class="person-icon" aria-label="how_to_reg icon">how_to_reg</mat-icon>{{userInfo.fullName}}
+    </div>
+    <div class="monthly-registration" fxFlex="100%" (click)="handleClickMonth()">
+        <mat-icon aria-hidden="false" class="monthly-icon" aria-label="call icon">date_range</mat-icon>Monthly schedule
+    </div>
+    <div class="phone-memo" fxFlex="100%" (click)="handleClickPhone()">
+        <mat-icon aria-hidden="false" class="phone-icon" aria-label="call icon">app_blocking</mat-icon>Phone memo Registration
+    </div>
+    <div class="confirmation" fxFlex="100%" (click)="clickConfirmation()" #confirmationShow>
+        <mat-icon aria-hidden="false" class="confirm-icon" aria-label="event_available icon">event_available</mat-icon>Confirmation of charge
+        <mat-icon [hidden]="showUpConfirmation" aria-hidden="false" class="arrow-drop-down-icon" aria-label="arrow_drop_down icon">arrow_drop_{{sign}}</mat-icon>
+        <div *ngIf="showUpConfirmation" (click)="handleClickBtnAddTodo()" class="confirmation-dropdown-content" >
+            <a ><mat-icon aria-hidden="false" class="add-box" aria-label="add_box icon">add_box</mat-icon>Todo</a>
+        </div>
+    </div>
+</div>

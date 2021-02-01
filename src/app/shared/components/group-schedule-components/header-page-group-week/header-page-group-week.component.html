@@ -1,0 +1,20 @@
+<div fxLayout="row wrap">
+  <div fxFlex="100">
+    <brc-header-schedule
+      [labelHeader]="labelHeader"
+      [data]="dataSelect"
+      [placeholder]="placeholder"
+      [buttonGroup]="buttonGroup"
+      [date]="dateCurrent"
+      [dateCurrent]="dateCurrent"
+      (valueButtonGroup)="onValueButtonGroup($event)"
+      (getValueSelect)="onGetValueSelect($event)"
+    ></brc-header-schedule>
+    <brc-header-week
+      [date]="dateCurrent"
+      (dailySchedule)="onDailySchedule($event)"
+      (firstDayOfWeek)="onFirstDayOfWeek($event)"
+    >
+    </brc-header-week>
+  </div>
+</div>

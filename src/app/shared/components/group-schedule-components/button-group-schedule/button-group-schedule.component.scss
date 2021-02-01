@@ -1,0 +1,26 @@
+div{
+  width: 100%;
+  min-width: 430px;
+}
+button {
+  min-height: 28px;
+  color: #4F4F4F;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: bold;
+  margin: 1px;
+  cursor: pointer;
+  border: 1px solid #b7c3c3;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+}
+button:hover {
+  color: #3D3D3D;
+  background-color: #ECECEC;
+}
+.mat-icon {
+  height: 18px;
+  font-size: 17px;
+  vertical-align: middle;
+  width: 15px;
+}
